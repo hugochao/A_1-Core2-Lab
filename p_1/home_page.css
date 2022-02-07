@@ -1,0 +1,33 @@
+body {
+    background: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/womanyellingcat-1573233850.jpg?resize=980:*) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+h1 {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: calc(20px + 2vw);
+    font-weight: 700;
+    color: #fafafa;
+    text-shadow: 2px 2px 2px #000;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+}
+.spotlight {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(
+        circle,
+        transparent 160px,
+        rgba(0, 0, 0, 0.85) 200px
+    );
+}
+
