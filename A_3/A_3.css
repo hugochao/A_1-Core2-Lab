@@ -2,5 +2,71 @@
 
 :root {
 	--coral: #FF7A63;
-	--jade:  #275244;
+	--kleinblue:  #1F18C0;
+	--font-size: 14px;
+	--font-size-mobile: 12px;
 }
+
+@media screen and (max-width: 720px) {
+	:root {
+		--font-size: var(--font-size-mobile);
+	}
+}
+
+body {
+	background: var(--kleinblue);
+	margin: 0;
+	padding: 20px;
+	color: var(--coral);
+	font-size: var(--font-size);
+	line-height: 1.25;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 1em 3em;
+}
+
+.sans {
+	font-family: 'Poiret One';
+}
+
+.serif {
+	font-family: 'Cardo', Garamond, 'Times New Roman', serif;
+}
+
+.centre {
+	text-align: center;
+}
+
+.title {
+	font-size: 10em;
+	line-height: 90%;
+	margin: 40px 0;
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+.placeholder {
+	border: 1px solid var(--coral);
+	padding: 10px;
+	text-align: center;
+	min-height: 300px;
+}
+
+.span-half {
+	grid-column: span 6;
+}
+
+.span-fourth {
+	grid-column: span 3;
+}
+
+.line-left {
+	border-left: 1px solid var(--coral);
+	padding: 0 10px;
+}
+
