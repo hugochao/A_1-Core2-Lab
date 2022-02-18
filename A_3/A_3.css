@@ -61,6 +61,10 @@ body {
 	grid-column: span 6;
 }
 
+.span-third {
+	grid-column: span 4;
+}
+
 .span-fourth {
 	grid-column: span 3;
 }
@@ -68,5 +72,16 @@ body {
 .line-left {
 	border-left: 1px solid var(--coral);
 	padding: 0 10px;
+}
+
+.accent {
+	font-size: 2.5em;
+	line-height: 120%;
+	margin: 20px 0;
+}
+
+.summary {
+	font-size: 1.5em;
+	line-height: 1.35;
 }
 
