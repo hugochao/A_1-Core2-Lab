@@ -1,4 +1,6 @@
-
+* {
+  font-family: 'Krayewski';
+}
 
 body { 
     display: flex; 
@@ -6,7 +8,6 @@ body {
     align-items: center;
     min-height: 100vh; 
     overflow: hidden;
-    background-color: black;
     text-transform: uppercase;} 
 
   
@@ -18,7 +19,7 @@ body {
     text-align: center; } 
   
   ul li a { 
-    color: sandybrown; 
+    color: rgb(230, 155, 90); 
     text-decoration: none; 
     font-size: 3em; 
     padding: 5px 20px; 
@@ -88,15 +89,15 @@ body {
   }
   
   .perspective-line:nth-child(odd) {
-    transform: skew(60deg, -30deg) scaleY(0.667);
+    transform: skew(60deg, -25deg) scaleY(0.667);
   }
   
   .perspective-line:nth-child(even) {
-    transform: skew(0deg, -30deg) scaleY(1.337);
+    transform: skew(0deg, -25deg) scaleY(1.337);
   }
   
   .perspective-text:hover p {
-    transform: translate(0, -50px);
+    transform: translate(0, -55px);
   }
   
   .perspective-line:nth-child(1) {
@@ -123,8 +124,8 @@ body {
 
 
   :root {
-    --primColor: white;
-    --secoColor: black;
+    --primColor: rgb(66, 66, 66);
+    --secoColor: sandybrown;
     --cornerRad: 4px;
   }
   body {
@@ -160,7 +161,7 @@ body {
     content: "";
   }
   summary::after {
-    content: "III";
+    content: "II";
     letter-spacing: -1px;
   }
   summary:hover {
