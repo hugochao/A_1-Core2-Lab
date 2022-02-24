@@ -9,10 +9,19 @@ body {
   height: 200vh;
 }
 
-.text {
-  position: fixed;
-  top: 10%;
+.content {
   left: 50%;
+  top: 20%;
+  color: aliceblue;
+}
+
+.place1 {
+  top: 15%;
+  left: 50%;
+}
+
+.text {
+  position: absolute;
   transform: translateX(-50%) translateY(-50%);
   list-style: none;
   border-bottom: 0;
@@ -30,7 +39,7 @@ body {
   color: #fff;
   opacity: 1;
   transition: all 0.5s ease-in-out;
-  max-width: 2em;
+  max-width: 5em;
   font-family: 'Krayewski';
 }
 .text.hidden li.spaced {
@@ -44,3 +53,43 @@ body {
   opacity: 0;
   max-width: 0;
 }
+
+.place2 {
+  top: 50%;
+  left: 50%;
+}
+
+.text2 {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+}
+
+.text2.hidden {
+  border-bottom: 1px solid #fff;
+}
+
+.text2 li {
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 5em;
+  font-family: 'Krayewski';
+}
+.text2.hidden li.spaced {
+  padding-left: 0;
+}
+.text2 li.spaced {
+  padding-left: 0.5em;
+}
+
+.text2.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+
