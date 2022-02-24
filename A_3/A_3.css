@@ -7,11 +7,7 @@
 	--font-size-mobile: 12px;
 }
 
-@media screen and (max-width: 720px) {
-	:root {
-		--font-size: var(--font-size-mobile);
-	}
-}
+
 
 body {
 	background: var(--kleinblue);
@@ -84,4 +80,101 @@ body {
 	font-size: 1.5em;
 	line-height: 1.35;
 }
+
+
+.did {
+	font-size: 3em;
+	letter-spacing: 50px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+	
+	body {
+		background: var(--kleinblue);
+		margin: 0;
+		padding: 20px;
+		color: var(--coral);
+		font-size: var(--font-size-mobile);
+		line-height: 1.25;
+	}
+	
+	.wrapper {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 1em 3em;
+	}
+	
+	.sans {
+		font-family: 'Poiret One';
+	}
+	
+	.serif {
+		font-family: 'Cardo', Garamond, 'Times New Roman', serif;
+	}
+	
+	.centre {
+		text-align: center;
+	}
+	
+	.title {
+		font-size: 2.5em;
+		line-height: 350%;
+		margin: 20px 0;
+	}
+	
+	.caps {
+		text-transform: uppercase;
+	}
+	
+	.placeholder {
+		border: 1px solid var(--coral);
+		padding: 10px;
+		text-align: center;
+		min-height: 300px;
+	}
+	
+	.span-half {
+		grid-column: span 6;
+	}
+	
+	.span-third {
+		grid-column: span 4;
+	}
+	
+	.span-fourth {
+		grid-column: span 3;
+	}
+	
+	.line-left {
+		border-left: 1px solid var(--coral);
+		padding: 0 10px;
+	}
+	
+	.accent {
+		font-size: 3em;
+		line-height: 80%;
+		margin: 80px 0;
+	}
+	
+	.summary {
+		font-size: 0.5em;
+		line-height: 1.35;
+	}
+
+	.did {
+		font-size: 3em;
+		position: relative;
+		letter-spacing: 0;
+	}
+
+}
+
+
+
+
 
