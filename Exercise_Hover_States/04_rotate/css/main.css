@@ -1,0 +1,89 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background-color: lightslategray;
+    overflow: hidden
+}
+
+.canvas {
+	width: 100vw;
+	height: 100vh;
+    padding-top: 100px;
+	position: relative;
+}
+
+
+/* phrase style */
+p {
+    font-family: times;
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+.phrase2 {
+     transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+/* hover */
+
+.phrase1:hover {
+  	transform: rotate(15deg);
+    cursor: pointer;
+}
+
+.phrase2:hover {
+  	transform: rotate(-15deg);
+    cursor: pointer;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+
+    .canvas {
+        width: 100vw;
+        height: 100vh;
+        padding-top: 100px;
+        position: relative;
+    }
+    
+    
+    /* phrase style */
+    p {
+        font-family: times;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+    }
+    
+    .phrase2 {
+         transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+    }
+    /* hover */
+    
+    .phrase1:hover {
+          transform: rotate(15deg);
+        cursor: pointer;
+    }
+    
+    .phrase2:hover {
+          transform: rotate(-15deg);
+        cursor: pointer;
+    
+    }
+
+  }
