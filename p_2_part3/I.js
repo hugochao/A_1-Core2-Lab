@@ -3,25 +3,13 @@ $(function() {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 20) {
+    if (scroll >= 50) {
       text.removeClass("hidden");
-    } else {
+    } 
+    if (scroll >= 400) {
       text.addClass("hidden");
     }
 
   });
 });
 
-$(function() {
-  var text = $(".text2");
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 25) {
-      text2.removeClass("hidden");
-    } else {
-      text2.addClass("hidden");
-    }
-
-  });
-});
