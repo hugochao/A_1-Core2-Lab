@@ -9,16 +9,6 @@ body {
   height: 200vh;
 }
 
-.content {
-  left: 50%;
-  top: 20%;
-  color: aliceblue;
-}
-
-.place1 {
-  top: 15%;
-  left: 50%;
-}
 
 .text {
   position: absolute;
@@ -28,7 +18,7 @@ body {
 }
 
 .text.hidden {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid gray;
 }
 
 .text li {
@@ -36,11 +26,11 @@ body {
   float: left;
   font-weight: 700;
   font-size: 20px;
-  color: #fff;
+  color: gray;
   opacity: 1;
   transition: all 0.5s ease-in-out;
-  max-width: 5em;
-  font-family: 'Krayewski';
+  max-width: 6em;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .text.hidden li.spaced {
   padding-left: 0;
@@ -54,42 +44,90 @@ body {
   max-width: 0;
 }
 
-.place2 {
-  top: 50%;
+.place {
   left: 50%;
 }
 
-.text2 {
-  position: absolute;
-  transform: translateX(-50%) translateY(-50%);
-  list-style: none;
-  border-bottom: 0;
+.item {
+  width: 1000px;
+  height: 300px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: black;
+  color: #FFF;
+  font-size: 1em;
 }
 
-.text2.hidden {
-  border-bottom: 1px solid #fff;
+
+
+
+.underlined {
+  color: black;
+  flex: 1;
+  font-size: 2em;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, black 0, black 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background 10s;
+}
+.underlined:hover {
+  background-size: 100% 100%;
 }
 
-.text2 li {
-  display: inline-block;
-  float: left;
-  font-weight: 700;
+.underlined--gradient {
+  background-position: 0 -0.1em;
+  background-image: linear-gradient(to right, black 0, white 100%);
+  text-shadow: 1px 1px 0 black, -1px 1px 0 gray;
+}
+
+
+
+
+h4{
+  color: #484848;
   font-size: 20px;
-  color: #fff;
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-  max-width: 5em;
-  font-family: 'Krayewski';
+  font-weight: bold;
+  letter-spacing: 7px;
+  cursor: pointer
 }
-.text2.hidden li.spaced {
-  padding-left: 0;
+h4 span{
+  transition: 3s linear
 }
-.text2 li.spaced {
-  padding-left: 0.5em;
+h4:hover span:nth-child(1){
+  margin-right: 5px
+}
+h4:hover span:nth-child(1):after{
+  content: "'";
+}
+h4:hover span:nth-child(2){
+  margin-left: 30px
+}
+h4:hover span{
+  color: goldenrod;
+  text-shadow: 0 0 10px gold,
+               0 0 20px gold, 
+               0 0 40px gold;
 }
 
-.text2.hidden li.ghost {
-  opacity: 0;
-  max-width: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
