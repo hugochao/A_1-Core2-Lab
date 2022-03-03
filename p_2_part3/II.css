@@ -1,0 +1,373 @@
+:root {
+  --primColor: rgb(66, 66, 66);
+  --secoColor: sandybrown;
+  --cornerRad: 4px;
+}
+body {
+  background-color: var(--secoColor);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.et-hero-tabs,
+.et-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: #eee;
+  padding: 0 2em;
+  background-color: black;
+}
+.et-hero-tabs h1,
+.et-slide h1 {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1rem;
+}
+.et-hero-tabs h3,
+.et-slide h3 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: var(--secoColor);
+  z-index: 10;
+  font-family: 'Krayewski';
+}
+.et-hero-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+
+.et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+}
+.et-hero-tab:hover {
+  color: white;
+  background: var(--primColor);
+  transition: all 0.5s ease;
+}
+
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: var(--primColor);
+  transition: left 0.3s ease;
+}
+
+@media (min-width: 800px) {
+  .et-hero-tabs h1,
+.et-slide h1 {
+    font-size: 3rem;
+  }
+  .et-hero-tabs h3,
+.et-slide h3 {
+    font-size: 1rem;
+  }
+
+  .et-hero-tab {
+    font-size: 1rem;
+  }
+}
+
+
+
+.perspective-text {
+  color: rgb(66, 66, 66);
+  font-size: 55px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  font-family: 'Krayewski';
+}
+
+.perspective-line {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+p {
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.5s ease-in-out;
+}
+
+.perspective-line:nth-child(odd) {
+  transform: skew(60deg, -25deg) scaleY(0.667);
+}
+
+.perspective-line:nth-child(even) {
+  transform: skew(0deg, -25deg) scaleY(1.337);
+}
+
+.perspective-text:hover p {
+  transform: translate(0, -55px);
+}
+
+.perspective-line:nth-child(1) {
+  left: 19px;
+}
+
+.perspective-line:nth-child(2) {
+  left: 48px;
+}
+
+.perspective-line:nth-child(3) {
+  left: 77px;
+}
+
+.perspective-line:nth-child(4) {
+  left: 106px;
+}
+
+.perspective-line:nth-child(5) {
+  left: 135px;
+}
+
+
+
+
+
+details {
+  margin: 40px;
+}
+summary {
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding: 12px 10px;
+  width: 23px;
+  height: 17px;
+  background-color: var(--primColor);
+  border: 2px solid var(--secoColor);
+  border-radius: var(--cornerRad);
+  color: var(--secoColor);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: transform 200ms ease-in-out 0s;
+}
+summary::before,
+summary::after {
+  position: static;
+  top: 0;
+  left: 0;
+}
+summary::before {
+  content: "";
+}
+summary::after {
+  content: "II";
+  letter-spacing: -1px;
+}
+summary:hover {
+  transform: scale(1.1);
+}
+summary::marker {
+  font-size: 0;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .menu {
+  animation-name: menuAnim;
+}
+details[open] summary::before {
+  content: "X";
+}
+details[open] summary::after {
+  content: "";
+}
+.menu {
+  height: 0;
+  width: fit-content;
+  border-radius: var(--cornerRad);
+  background-color: var(--primColor);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  animation: closeMenu 300ms ease-in-out forwards;
+}
+.menu a {
+  padding: 12px 24px;
+  margin: 0 16px;
+  color: var(--secoColor);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+  transition: filter 200ms linear 0s;
+}
+.menu a:nth-of-type(1) {
+  padding-top: 24px;
+}
+.menu a:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.menu a:hover {
+  filter: brightness(200%);
+}
+details::before {
+  color: var(--secoColor);
+  position: absolute;
+  margin-left: 80px;
+  padding: 10px 10px;
+  opacity: 0.4;
+  
+}
+details[open]::before {
+  animation: fadeMe 300ms linear forwards;
+}
+@keyframes menuAnim {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 312px;
+  }
+}
+@keyframes fadeMe {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.text {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+}
+
+.text.hidden {
+  border-bottom: 1px solid gray;
+}
+
+.text li {
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  font-size: 20px;
+  color: gray;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 6em;
+  font-family: 'Krayewski';
+  height: 2em;
+}
+.text.hidden li.spaced {
+  padding-left: 0;
+}
+.text li.spaced {
+  padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+
+.place {
+  left: 50%;
+}
+
+.item {
+  width: 1200px;
+  height: 500px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: black;
+  color: #FFF;
+  font-size: 1.1em;
+}
+
+
+
+
+
+.underlined {
+  color: black;
+  flex: 1;
+  font-size: 1.5em;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, black 0, black 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background 10s;
+}
+.underlined:hover {
+  background-size: 100% 100%;
+}
+
+.underlined--gradient {
+  background-position: 0 -0.1em;
+  background-image: linear-gradient(to right, black 0, white 100%);
+  text-shadow: 1px 1px 0 black, -1px 1px 0 gray;
+}
+
+.underlined--thin {
+  background-image: linear-gradient(to right, white 0, white 100%);
+  text-shadow: 1px 1px 0 black, -1px 1px 0 gray;
+}
+
+
+h4{
+  color: #484848;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 7px;
+  cursor: pointer
+}
+h4 span{
+  transition: 3s linear
+}
+h4:hover span:nth-child(1){
+  margin-right: 5px
+}
+h4:hover span:nth-child(1):after{
+  content: "'";
+}
+h4:hover span:nth-child(2){
+  margin-left: 30px
+}
+h4:hover span{
+  color: goldenrod;
+  text-shadow: 0 0 10px gold,
+               0 0 20px gold, 
+               0 0 40px gold;
+}
