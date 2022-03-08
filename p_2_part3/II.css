@@ -3,6 +3,7 @@
   --secoColor: sandybrown;
   --cornerRad: 4px;
 }
+
 body {
   background-color: var(--secoColor);
   font-family: Arial, Helvetica, sans-serif;
@@ -104,7 +105,7 @@ a {
   font-weight: 900;
   letter-spacing: -2px;
   text-transform: uppercase;
-  font-family: 'Krayewski';
+  font-family: "Krayewski";
 }
 
 .perspective-line {
@@ -115,7 +116,7 @@ a {
 
 p {
   margin: 0;
-  height: 50px;
+  height: 51px;
   line-height: 50px;
   transition: all 0.5s ease-in-out;
 }
@@ -265,7 +266,7 @@ details[open]::before {
 }
 
 
-.text {
+/* .text {
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
   list-style: none;
@@ -314,7 +315,7 @@ details[open]::before {
   font-size: 1.1em;
 }
 
-
+ */
 
 
 
@@ -347,9 +348,7 @@ details[open]::before {
 
 
 h4{
-  color: #484848;
   font-size: 20px;
-  font-weight: bold;
   letter-spacing: 7px;
   cursor: pointer
 }
@@ -370,4 +369,88 @@ h4:hover span{
   text-shadow: 0 0 10px gold,
                0 0 20px gold, 
                0 0 40px gold;
+}
+
+
+.shadow{
+  text-shadow: 1px 1px 0 black, -1px 1px 0 gray;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  
+  body {
+    background-color: var(--secoColor);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .perspective-text {
+    color: sandybrown;
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    font-family: "Krayewski";
+  }
+
+  .underlined {
+    color: black;
+    flex: 1;
+    font-size: 1.5em;
+    line-height: 1.2;
+    text-decoration: none;
+    background-image: linear-gradient(to right, black 0, black 100%);
+    background-position: 0 1.2em;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background 10s;
+  }
+  .underlined:hover {
+    background-size: 100% 100%;
+  }
+  
+  .underlined--gradient {
+    background-position: 0 -0.1em;
+    background-image: linear-gradient(to right, black 0, white 100%);
+    text-shadow: 1px 1px 0 black, -1px 1px 0 sandybrown;
+  }
+  
+  .underlined--thin {
+    background-image: linear-gradient(to right, white 0, white 100%);
+    text-shadow: 1px 1px 0 black, -1px 1px 0 sandybrown
+  }
+
+  h4{
+    font-size: 10px;
+    letter-spacing: 2px;
+    cursor: pointer
+  }
+  h4 span{
+    transition: 3s linear
+  }
+  h4:hover span:nth-child(1){
+    margin-right: 10px
+  }
+  h4:hover span:nth-child(1):after{
+    content: "'";
+  }
+  h4:hover span:nth-child(2){
+    margin-left: 50px
+  }
+  h4:hover span{
+    color: goldenrod;
+    text-shadow: 0 0 10px gold,
+                 0 0 20px gold, 
+                 0 0 40px gold;
+  }
+  .shadow{
+    text-shadow: 1px 1px 0 black, -1px 1px 0 sandybrown;
+  }
+
 }
