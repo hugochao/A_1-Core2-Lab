@@ -75,17 +75,17 @@ class StickyNavigation {
 new StickyNavigation();
 
 
-$(function() {
-	var text = $(".text");
-	$(window).scroll(function() {
-	  var scroll = $(window).scrollTop();
+// $(function() {
+// 	var text = $(".text");
+// 	$(window).scroll(function() {
+// 	  var scroll = $(window).scrollTop();
   
-	  if (scroll >= 800) {
-		text.removeClass("hidden");
-	  } 
-	  else {
-		text.addClass("hidden");
-	  }
+// 	  if (scroll >= 800) {
+// 		text.removeClass("hidden");
+// 	  } 
+// 	  else {
+// 		text.addClass("hidden");
+// 	  }
   
-	});
-  });
+// 	});
+//   });
