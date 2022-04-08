@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell, World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+    <div class="btn">
+        <div class="bg"></div>
+        <div class="btn">
+            <h2>The story was begin with the age of darkness,</h2>
+            </div>
+        
+            <div class="btn">
+            <h1>the uncharted territory have not been found yet.</h1>
+            </div>
+            <br>
+        <h2>But it was changed after a beam of light</h2>
+        <button class="box" onclick="typeWriter()">Age of True</button>
+        <div class="text">
+            <a href="index2.html"   type="checkbox" 
+            id="myCheck" 
+            onmouseover="myFunction()" 
+            onclick="alert('However, the glory of binary has become history, the outsiders brought a gratia to the human world, a number between one and zero. The era of true has become not worth mentioning, a new era has ushered in.')"><p id="demo"></p></a>
+          </div>
+          <h2>the light separate the world into true and false, true as 1 and false as 0, we call them Binary.</h2>
+
+
+    </div>    
+
+
+
+    <script>
+        var i = 0;
+        var txt = 'amount of 1&0 made obejcts became visible on the screens, and people exchange their data back and forth in the single ways. The castles and ward must built for the more stable and effeciency trading system, the Internet';
+        var speed = 50;
+        
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+    </script>
+
+</body>
+</html>
