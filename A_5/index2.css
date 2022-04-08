@@ -1,0 +1,11 @@
+*{
+    background-color: black;
+}
+
+#output {
+    color: black;
+    text-shadow: 1px;
+    text-shadow: 1px 1px 0 black, -10px 10px 0 gray;
+    position: relative;
+    text-align: center;
+  }
