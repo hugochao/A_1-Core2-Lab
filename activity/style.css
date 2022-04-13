@@ -28,7 +28,7 @@
   flex-wrap: wrap;
 }
 .top-section .content-preview {
-  flex: 0 1 230px;
+  flex: 0 1 630px;
 }
 @media screen and (max-width: 520px) {
   .top-section .content-preview {
@@ -116,7 +116,7 @@
   }
 }
 .lower-section .content-preview {
-  max-width: 240px;
+  max-width: 540px;
   padding: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
