@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+.cover {
+  background-image: url("images/paper.jpg");
+  background-size: cover;
+  background-position: center;
+  color: gray;
+  font-family: "Lato", sans-serif;
+  padding: 2em;
+}
+
+.cover__content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.top-section {
+  background-color: #ffffff;
+  color: gray;
+  padding: 3em;
+  margin-bottom: 4em;
+}
+.top-section__content {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.top-section .content-preview {
+  flex: 0 1 230px;
+}
+@media screen and (max-width: 520px) {
+  .top-section .content-preview {
+    flex-grow: 1;
+  }
+}
+
+.logo {
+  display: none;
+}
+
+.title {
+  display: flex;
+  align-items: last baseline;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+}
+.title__text {
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 900;
+  font-size: 3em;
+  flex-grow: 1;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.33em;
+}
+@media screen and (min-width: 520px) {
+  .title__text {
+    font-size: 4em;
+  }
+}
+@media screen and (min-width: 700px) {
+  .title__text {
+    font-size: 6em;
+  }
+}
+.title__details {
+  font-weight: 400;
+}
+.title a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.title a:hover {
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-size: larger;
+}
+
+.content-preview {
+  padding: 0.5em;
+  justify-self: start;
+}
+@media screen and (min-width: 700px) {
+  .content-preview--right {
+    text-align: right;
+    justify-self: end;
+  }
+}
+.content-preview__cat, .content-preview__title {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1.2em;
+}
+.content-preview__cat {
+  text-decoration: underline;
+  margin-bottom: 0.25em;
+}
+.content-preview__title {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.content-preview__excerpt {
+  text-transform: lowercase;
+  font-weight: 300;
+}
+
+.lower-section {
+  margin: 0 1em;
+  grid-template-columns: 10% 2fr 10px 2fr 10%;
+  grid-auto-flow: row dense;
+}
+@media screen and (min-width: 700px) {
+  .lower-section {
+    display: grid;
+    margin-top: 8em;
+  }
+}
+.lower-section .content-preview {
+  max-width: 240px;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.lower-section .content-preview--top {
+  margin-top: 2em;
+}
+.lower-section .content-preview--bottom {
+  margin-bottom: 2.5em;
+}
+
+.headline {
+  grid-row: 2;
+  grid-column: 1/-1;
+  display: flex;
+}
+
+.line--vertical {
+  grid-column: 3;
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .line--vertical {
+    display: block;
+  }
+}
