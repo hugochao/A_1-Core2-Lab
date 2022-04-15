@@ -52,39 +52,55 @@ document.body.appendChild(newImage);
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    const channel = 'receipts-w-xyabskm1y';
+  const channel = 'receipts-w-xyabskm1y';
 
-    fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
-      .then(response => response.json())
-      .then(data => {
-        // console.log(data);
-        renderTitle(data);
-      });
-    
-  });
-
-  const renderTitle = (data) => {
-    let title = data['title'];
-    document.getElementById('channel-title').innerText = title;
-  };
-
-  const renderBlocks = (data) => {
-    let blocks = data['contents'];
-    blocks.forEach((block) => {
-      console.log(block);
-      let blockclass = block ['class'];
-      if (blockClass == 'Image'){
-        renderImage(block);
-      }
+  fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
+    .then(response => response.json())
+    .then(data => {
+      // console.log(data);
+      renderTitle(data);
+      renderBlocks(data);
+      
     });
-  };
+  
+});
 
-const renderImage = (block) => {
-let imageUrl = block['image']['display']['url'];
-let iamgeBlockTemplate = document.getElementById('image-block');
-let clone = iamgeBlockTemplate.content.cloneNode(true);
+const renderTitle = (data) => {
+  let title = data['title'];
+  document.getElementById('channel-title').innerText = title;
+};
 
-clone.querySelector('img').src = imageUrl;
+const renderBlocks = (data) => {
+  let blocks = data['contents'];
+  let hue = 0;
+  blocks.forEach((block) => {
+    let blockClass = block['class'];
+    if (blockClass == 'Image') {
+      renderImage(block, hue);
+    }
+    hue = hue + 25;
+  });
+};
 
-document.getElementById('contents').appendChild(clone);
-}
+const renderImage = (block, hue) => {
+  let imageUrl = block['image']['display']['url'];
+  let imageBlockTemplate = document.getElementById('image-block');
+  let clone = imageBlockTemplate.content.cloneNode(true);
+
+  clone.querySelector('img').src = imageUrl;
+  clone.querySelector('p').innerText = block['title'];
+
+  let randomHue = Math.random()*255;
+  let randomColor = 'hsl(' + randomHue + ', 100%, 50%)';
+  let textColor = 'hsl(' + hue + ', 100%, 50%)';
+  clone.querySelector('li').style.setProperty('--color', randomColor);
+  clone.querySelector('li').style.setProperty('--text-color', textColor);
+
+  let randomWidth = Math.random()*20;
+  let randomWidthValue = randomWidth + '%';
+  clone.querySelector('li').style.setProperty('--width', randomWidthValue);
+
+  document.getElementById('contents').appendChild(clone);
+};
+
+
