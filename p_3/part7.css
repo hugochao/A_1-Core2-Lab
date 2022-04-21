@@ -1,11 +1,5 @@
-.container{
-    height: 100vh;
-    width: 100%;
-    background-image: url(images/91-917746_wooden-table-top-view-hd\ \(1\).jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
+
+
 
 :root {
     --margin: 10px;
@@ -16,6 +10,7 @@
   }
 
   body {
+    background-image: url(images/91-917746_wooden-table-top-view-hd\ \(1\).jpg);
     min-height: 100vh;
     width: 100%;
   }
@@ -27,10 +22,6 @@
   ul {
     list-style-type: none;
   }
-
-  h1 {
-    color: white;
-  }
   
   #contents {
     /* display: grid;
@@ -41,6 +32,7 @@
     align-items: start;
     justify-items: start;
     padding: 0;
+    position: relative;
   }
 
   img {
@@ -50,23 +42,39 @@
 
   .block {
     padding: var(--margin);
-    background-color: var(--color,white);
-    color: var(--text-color, black);
     width: var(--width);
 
-    -webkit-transform: rotate(120deg);
-    -moz-transform: rotate(120deg);
-    -ms-transform: rotate(120deg);
-    -o-transform: rotate(120deg);
-    transform: rotate(120deg);
-
+  transform: rotate(50deg);
   }
 
-  .block_image_caption {
-    margin: 0;
-    display: none;
+  .block:hover{
+    -webkit-transition:.25s ease-out;
+    transition:.25s ease-out;
+    transform: rotate(0deg);
   }
 
-  .block--image:hover .block_image_caption {
-    display: block;
+  .title {
+    text-align: center;
+    position: relative;
+    top: 10px;
+    color: white;
+  }
+
+  .subtitle{
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    color: white;
+  }
+
+  .subtitle:hover{
+    color: black;
+    background-color: white;
+    -webkit-transition:.25s ease-out;
+    transition:.25s ease-out;
+  }
+
+  a {
+    text-decoration: none;
+    color:inherit
   }
