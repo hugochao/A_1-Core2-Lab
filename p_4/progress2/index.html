@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DAMIEN HIRST SIMULATOR</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.js"></script>
+
+
+
+<script type="text/paperscript" canvas="myCanvas">
+	
+
+	
+	var keyData = {
+			q: {
+				color: '#1abc9c'
+			},
+			w: {
+				color: '#2ecc71'
+			},
+			e: {
+				color: '#3498db'
+			},
+			r: {
+				color: '#9b59b6'
+			},
+				t: {
+				color: '#34495e'
+			},
+			y: {
+				color: '#16a085'
+			},
+			u: {
+				color: '#27ae60'
+			},
+			i: {
+				color: '#2980b9'
+			},
+			o: {
+				color: '#8e44ad'
+			},
+			p: {
+				color: '#2c3e50'
+			},
+			a: {
+				color: '#f1c40f'
+			},
+			s: {
+				color: '#e67e22'
+			},
+				d: {
+				color: '#e74c3c'
+			},
+			f: {
+				color: '#95a5a6'
+			},
+			g: {
+				color: '#f39c12'
+			},
+			h: {
+				color: '#d35400'
+			},
+			j: {
+				color: '#1abc9c'
+			},
+			k: {
+				color: '#2ecc71'
+			},
+			l: {
+				color: '#3498db'
+			},
+			z: {
+				color: '#9b59b6'
+			},
+			x: {
+				color: '#34495e'
+			},
+			c: {
+				color: '#16a085'
+			},
+			v: {
+				color: '#27ae60'
+			},
+			b: {
+				color: '#2980b9'
+			},
+			n: {
+				color: '#8e44ad'
+			},
+			m: {
+				color: '#2c3e50'
+			}
+		}
+
+	var circles = [];
+
+	function onKeyDown(event) {
+	if(keyData[event.key]){
+		var maxPoint = new Point(view.size.width, view.size.height);
+		var randomPoint = Point.random();
+		var point = maxPoint * randomPoint;
+		var newCircle = new Path.Circle(point,50);
+		newCircle.fillColor = keyData[event.key].color;
+		keyData[event.key].sound.play();
+		circles.push(newCircle);
+		}
+	}
+
+	function onFrame(event){
+		for(var i = 0; i < circles.length; i++){
+			circles[i].fillColor.hue += 1;
+			circles[i].scale(1);
+		}
+	}
+
+	</script><link rel="stylesheet" href="./style.css">
+
+</head>
+<body onload="showAlert()">
+
+<canvas onclick="window.print()" id="myCanvas" resize>
+
+	<input type="text">
+    <ul id="keyboard">
+        <li note="C" ></li>
+        <li note="C#" ></li>
+        <li note="D" ></li>
+        <li note="D#" ></li>
+        <li note="E" ></li>
+        <li note="F" ></li>
+        <li note="F#" ></li>
+        <li note="G" ></li>
+        <li note="G#" ></li>
+        <li note="A" ></li>
+        <li note="A#" ></li>
+        <li note="B" ></li>
+        <li note="C2" ></li>
+        <li note="C#2" ></li>
+        <li note="D2" ></li>
+        <li note="D#2" ></li>
+        <li note="E2" ></li>
+      </ul>
+
+</canvas>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.22/paper.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
