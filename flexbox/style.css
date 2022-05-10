@@ -1,0 +1,184 @@
+body  {
+    color: white;
+    background-color: black;
+    font-family: omnes-pro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 26px;
+    margin: 5vw;
+  }
+  
+  #month {
+    text-align: center;
+    font-size: 100px;
+    font-weight: 700;
+    width: 90vw;
+    color: gray;
+  }
+  
+  .container {
+    width: 90vw;
+    margin: 5vw;
+    gap: 0.5vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .container2 {
+    margin-top: -1vw;
+  }
+  
+  .week{
+    margin-top: -0.5vw;
+    width:8vw;
+    color: white;
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 0.5vw ;
+    padding: 1.8vw;
+    text-align: center;
+  }
+  .weekend1 {
+    color: white;
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 0.5vw;
+    padding: 1.8vw;
+  }
+  .week:hover {
+    background-color: gray;
+  }
+  
+  .day {
+    width: 8vw;
+    height: 6vh;
+    padding: 2vw;
+    text-align: center;
+    margin-top: -0.5vw;
+  }
+  .day:hover {
+    background-color: gray;
+    border-radius: 0.5vw;
+    color: white;
+  }
+  
+  .weekend {
+    color: gray;
+  }
+  .weekend:hover {
+    background-color: gray;
+    border-radius: 0.5vw;
+    color: white;
+  }
+  
+  .valentines:hover {
+    background-color: gray;
+    border-radius: 0.5vw;
+    color: white;
+  }
+  
+      .day:nth-child(1){
+         order: 1 ;
+       }
+       .day:nth-child(2){
+         order: 2;
+       }
+       .day:nth-child(3){
+         order: 3;
+       }
+       .day:nth-child(4){
+         order: 4;
+       }
+       .day:nth-child(5){
+         order: 5;
+       }
+       .day:nth-child(6){
+         order: 6;
+       }
+       .day:nth-child(7){
+         order: 7;
+       }
+       .day:nth-child(8){
+         order: 8;
+       }
+       .day:nth-child(9){
+         order: 9;
+       }
+       .day:nth-child(10){
+         order: 10;
+       }
+       .day:nth-child(11){
+         order: 11 ;
+       }
+       .day:nth-child(12){
+         order: 12;
+       }
+       .day:nth-child(13){
+         order: 13;
+       }
+       .day:nth-child(14){
+         order: 14;
+       }
+       .day:nth-child(15){
+         order: 15;
+       }
+       .day:nth-child(16){
+         order: 16;
+       }
+       .day:nth-child(17){
+         order: 17;
+       }
+       .day:nth-child(18){
+         order: 18;
+       }
+       .day:nth-child(19){
+         order: 19;
+       }
+       .day:nth-child(20){
+         order: 20;
+       }
+       .day:nth-child(21){
+         order: 21 ;
+       }
+       .day:nth-child(22){
+         order: 22;
+       }
+       .day:nth-child(23){
+         order: 23;
+       }
+       .day:nth-child(24){
+         order: 24;
+       }
+       .day:nth-child(25){
+         order: 25;
+       }
+       .day:nth-child(26){
+         order: 26;
+       }
+       .day:nth-child(27){
+         order: 27;
+       }
+       .day:nth-child(28){
+         order: 28;
+       }
+       .day:nth-child(29){
+         order: 29;
+       }
+       .day:nth-child(30){
+         order: 30;
+       }
+       .day:nth-child(31){
+         order: 31;
+       }
+       .day:nth-child(32){
+         order: 32;
+       }
+       .day:nth-child(33){
+         order: 33;
+       }
+       .day:nth-child(34){
+         order: 34;
+       }
+       .day:nth-child(35){
+         order: 35;
+       }
