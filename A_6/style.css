@@ -3,7 +3,6 @@
   --crl-bg: hsl(300 21% 16%);
 }
 
-
 /* background transparency */
 
 body {
@@ -165,6 +164,19 @@ div {
 
     
    }
+
+   @media (max-width: 500px) {
+    div {
+      background: black;
+      border-radius: 8px;
+      color: #efefef;
+      margin: 50px auto;
+      padding: 25px;
+      width: 200px;
+      position: relative;
+      font-size: smaller;
+     }
+    }
 
 
   
