@@ -165,7 +165,7 @@ div {
     
    }
 
-   @media (max-width: 500px) {
+   @media (max-width: 480px) {
     div {
       background: black;
       border-radius: 8px;
