@@ -2,12 +2,12 @@
 $(document).ready(function(){
 	var d = new Date();
 	var n = d.getHours();
-	if (n > 19 || n < 6)
- 		document.body.className = "night";
-	else if (n > 16 && n < 19)
- 		document.body.className = "sunset";
+	if (n > 20 || n < 6)
+ 		document.body.className = "neonnight";
+	else if (n > 16 && n < 20)
+ 		document.body.className = "neonsunset";
 	else
- 		document.body.className = "day";
+ 		document.body.className = "neonday";
 });
 
 

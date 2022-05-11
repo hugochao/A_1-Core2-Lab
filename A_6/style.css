@@ -1,3 +1,9 @@
+:root{
+  --clr-neon: hsl(320 100% 54%);
+  --crl-bg: hsl(300 21% 16%);
+}
+
+
 /* background transparency */
 
 body {
@@ -14,30 +20,74 @@ h1 {
 }
 
 div {
- background: #0098d4;
+ background: black;
  border-radius: 10px;
  color: #efefef;
  margin: 50px auto;
  padding: 25px;
- width: 600px;
+ width: 1000px;
+ position: relative;
 }
 
-.day {
- background-color: yellow;
+.neonday{
+  font-size: 3rem;
+
+  font-display: inline-block;
+  text-decoration: none;
+  color: rgb(190, 190, 190);
+  border: rgb(190, 190, 190) 0.125em solid;
+  display: grid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  background-color: orange;
+  background-image: url(images/Helios.png);
 }
 
-.sunset {
- background-color: silver;
+ .neonsunset{
+  font-size: 3rem;
+
+  font-display: inline-block;
+  text-decoration: none;
+  color: rgb(199, 158, 185);
+  border: rgb(199, 158, 185) 0.125em solid;
+  display: grid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 
+  0 0 0.125em hsl(0 0% 50% / 0.3),
+  0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 rgb(199, 158, 185), 0 0 0.5em 0 rgb(199, 158, 185);
+
+  background-color: rgb(0, 0, 255);
+  background-image: url(images/apollo.png);
 }
 
-.night {
- background-color: #2b2b2b;
+.neonnight{
+  font-size: 3rem;
+
+  font-display: inline-block;
+  text-decoration: none;
+  color: hsl(320 100% 54%);
+  border: hsl(320 100% 54%) 0.125em solid;
+  display: grid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 
+  0 0 0.125em hsl(0 0% 100% / 0.3),
+  0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 hsl(320 100% 54%), 0 0 0.5em 0 hsl(320 100% 54%);
+
+  background-color: #2b2b2b;
+  background-image: url(images/greek\ head.png);
 }
 
- .day:after,
- .sunset:after,
- .night:after {
-  color: red;
+ .neonday:after,
+ .neonsunset:after,
+ .neonnight:after {
+  color: white;
   content: "";
   font-size: 2em;
   position: absolute;
@@ -46,27 +96,75 @@ div {
   transform: translate(-50%, -50%);
  }
  
- .day:after {
-  content: "It's DAY  :D";
+ .neonday:after {
+  content: "Daytime events";
  }
  
- .sunset:after {
-  content: "It's SUNSET  :)";
+ .neonsunset:after {
+  content: "Sunset Breaks till - 21:00";
  }
  
- .night:after {
-  content: "It's NIGHT  :(";
+ .neonnight:after {
+  content: "Night Club";
  }
 
 
 /* digital clock */
 
  #timedate {
-    font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     text-align:left;
     width: 50%;
     margin: 40px auto;
     color:#fff;
-    border-left: 3px solid #ed1f24;
     padding: 20px;
   }
+
+
+
+  .scroll-left {
+    height: 500px;	
+    overflow: hidden;
+    position: relative;
+   }
+   .scroll-left .inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: scroll-left 17s linear infinite;
+    -webkit-animation: scroll-left 17s linear infinite;
+    animation: scroll-left 17s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @-moz-keyframes scroll-left {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+   }
+   @-webkit-keyframes scroll-left {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+   }
+   @keyframes scroll-left {
+    0%   { 
+    -moz-transform: translateX(100%); /* Browser bug fix */
+    -webkit-transform: translateX(100%); /* Browser bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-130%); /* Browser bug fix */
+    -webkit-transform: translateX(-130%); /* Browser bug fix */
+    transform: translateX(-130%); 
+    }
+
+    
+   }
+
+
+  
