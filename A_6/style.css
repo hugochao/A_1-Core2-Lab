@@ -96,7 +96,7 @@ div {
  }
  
  .neonday:after {
-  content: "Daytime events";
+  content: "Today's events";
  }
  
  .neonsunset:after {
