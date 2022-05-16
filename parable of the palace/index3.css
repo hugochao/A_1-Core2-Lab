@@ -1,0 +1,168 @@
+*{
+  font-family: 'Common Pixel', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  border-style: border-box;
+}
+
+a{
+  cursor:url("images/cursor.png"), url("images/cursor.cur"), default;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+body {
+  align-items: center;
+  background: #808080;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+}
+
+.eye__container--outer {
+  align-items: center;
+  display: flex;
+  height: 10em;
+  justify-content: center;
+  margin-left: 2.5em;
+}
+.eye__container--outer .eye__eye-ball {
+  border: 0.5em solid white;
+  height: 0;
+  margin-left: 2.5em;
+  margin-right: 5em;
+  overflow: hidden;
+  position: relative;
+  transition: all 125ms linear;
+  width: 10em;
+}
+.eye__container--outer .eye__eye-ball--left {
+  border-radius: 0 100%;
+  transform: rotate(182deg);
+}
+.eye__container--outer .eye__eye-ball--right {
+  border-radius: 100% 0;
+  transform: rotate(-2deg);
+}
+.eye__container--outer:hover .eye__eye-ball {
+  height: 10em;
+  margin-top: -1em;
+}
+.eye__container--outer:hover .eye__eye-ball--left {
+  transform: rotate(144deg);
+}
+.eye__container--outer:hover .eye__eye-ball--right {
+  transform: rotate(35deg);
+}
+
+.iris {
+  border: 1.5em solid red;
+  border-radius: 5em;
+  height: 2.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5em;
+}
+
+.iris2 {
+  border: 1.5em solid rgb(0, 255, 255);
+  border-radius: 5em;
+  height: 2.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5em;
+}
+
+.iris3 {
+  border: 1.5em solid #8e5191;
+  border-radius: 5em;
+  height: 2.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5em;
+}
+
+.iris4 {
+  border: 1.5em solid #808080;
+  border-radius: 5em;
+  height: 2.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5em;
+}
+
+.iris5 {
+  border: 1.5em solid #31558b;
+  border-radius: 5em;
+  height: 2.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5em;
+}
+
+a {
+  color: white;
+}
+
+.text {
+  text-align: center;
+  position: relative;
+  left: 250px;
+  width: 800px;
+  color: aliceblue;
+}
+
+.box {
+  text-align: center;
+  position: absolute;
+  left: 810px;
+  color: white;
+  background-color: black;
+}
+
+ /* DEMO-SPECIFIC STYLES */
+ .typewriter h1 {
+  color: rgb(10, 239, 255);
+  font-family: 'Common Pixel', sans-serif;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid purple; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  margin-left: 170px;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: purple }
+}
